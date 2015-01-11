@@ -1,3 +1,11 @@
+# Include system wide settings which are ignored
+# by default if one has their own .inputrc
+$include /etc/inputrc
+
+# use ctrl+left/right arrow keys to jump over words
+"\e[5C": forward-word
+"\e[5D": backward-word
+
 # Make Tab autocomplete regardless of filename case
 set completion-ignore-case on
 
@@ -32,6 +40,7 @@ set visible-stats on
 set skip-completed-text on
 
 # Allow UTF-8 input and output, instead of showing stuff like $'\0123\0456'
+set meta-flag on
 set input-meta on
 set output-meta on
 set convert-meta off
