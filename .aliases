@@ -15,6 +15,7 @@ alias g="git"
 alias h="history"
 alias j="jobs"
 alias cls=clear
+alias __git_ps1="git branch 2>/dev/null | grep '*' | sed 's/* \(.*\)/(\1)/'"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
